@@ -25,7 +25,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, toggleSidebar }) => {
       } min-h-screen fixed top-0 left-0 transition-all duration-300`}
     >
       <div className="flex flex-col h-full bg-blue-950 text-slate-300 rounded-l-lg absolute w-full">
-        <div className="flex justify-start gap-2 items-center pl-4 pr-4 pt-4 pb-4 bg-blue-900 relative rounded-tl-lg">
+        <div onClick={toggleSidebar} className="cursor-pointer flex justify-start gap-2 items-center pl-4 pr-4 pt-4 pb-4 bg-blue-900 relative rounded-tl-lg">
           <img src="/logo.svg" className="w-10 h-10" />
           {!isCollapsed && (
             <span className="text-2xl font-semibold">Company</span>
