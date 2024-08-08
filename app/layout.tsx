@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className={`${inter.className} flex`}>
         <ClientLayout>
-          <main className="flex-grow p-4 mt-16 mb-16 overflow-auto">
+          <main className="flex-grow p-4 mt-16 overflow-auto">
             {children}
           </main>
         </ClientLayout>
