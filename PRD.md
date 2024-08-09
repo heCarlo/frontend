@@ -1,4 +1,4 @@
-# PRD - Documento de Requisitos do Produto (Template)
+# PRD - Documento de Requisitos do Produto
 
 ## Introdução & Objetivo
 
@@ -10,14 +10,12 @@ A implementação deste sistema visa resolver problemas críticos do sistema man
 
 ## Público Alvo
 
-O público-alvo é composto exclusivamente pelas equipes de manutenção, que utilizarão o sistema para registrar, gerenciar e monitorar solicitações de manutenção. A solução será adaptada para atender suas necessidades específicas, melhorando a eficiência e a comunicação interna.
-
-### Priorizar Usuários
+A aplicação será utilizada principalmente por dois grupos de usuários dentro da empresa:
 
 | Perfil de usuário       | Descrição, necessidades e interesses.                                                                 |
 |-------------------------|--------------------------------------------------------------------------------------------------------|
-| Primeiro grupo de usuários | Técnicos de manutenção que precisam registrar e acompanhar solicitações de manutenção, acessar o histórico de manutenção e obter relatórios de desempenho. |
-| Segundo grupo de usuários  | Gerentes de manutenção que precisam monitorar o status das solicitações, atribuir equipes e gerar relatórios de desempenho e custos. |
+| Primeiro grupo de usuários | Precisam cadastrar solicitações de manutenção e informar o status, registrar atividades e acompanhar o estoque de peças. |
+| Segundo grupo de usuários  | Necessitam de uma visão geral das atividades de manutenção, relatórios detalhados e controle do estoque de peças. |
 
 ## Personas
 
@@ -49,52 +47,122 @@ O público-alvo é composto exclusivamente pelas equipes de manutenção, que ut
    - **Prioridade:** [P1]
 
 5. **F5:** Atribuição de Equipes
-   - **Descrição:** O sistema deve permitir a atribuição de equipes de manutenção às solicitações e registrar as peças e materiais utilizados, incluindo quantidade e fornecedor.
+   - **Descrição:** O sistema deve permitir a atribuição de equipes de manutenção às solicitações
    - **Critérios de Aceitação:** Equipes atribuídas corretamente e registro de peças e materiais realizado com sucesso.
    - **Prioridade:** [P1]
 
-6. **F6:** Geração de Relatórios de Manutenção
+6. **F6:** Registrar as peças e materiais utilizados
+   - **Descrição:** Registrar as peças e materiais utilizados, incluindo quantidade e fornecedor.
+   - **Critérios de Aceitação:** Registro de peças e materiais realizado com sucesso.
+   - **Prioridade:** [P1]
+
+7. **F7:** Geração de Relatórios de Manutenção
    - **Descrição:** O sistema deve gerar relatórios de manutenção por máquina, por período e por tipo de manutenção (preventiva, corretiva, etc.).
    - **Critérios de Aceitação:** Relatórios gerados corretamente e informações apresentadas conforme solicitado.
    - **Prioridade:** [P1]
 
 ### Controle de Estoque de Peças
-7. **F7:** Cadastro de Peças de Reposição
+8. **F8:** Cadastro de Peças de Reposição
    - **Descrição:** O sistema deve permitir o cadastro de peças de reposição, incluindo nome, código, fornecedor, quantidade em estoque e valor unitário.
    - **Critérios de Aceitação:** Cadastro realizado corretamente e informações acessíveis.
    - **Prioridade:** [P1]
 
-8. **F8:** Registro de Entrada e Saída de Peças
+9. **F9:** Registro de Entrada e Saída de Peças
    - **Descrição:** O sistema deve permitir registrar a entrada e saída de peças, com data e quantidade.
    - **Critérios de Aceitação:** Registros realizados corretamente e atualizações de estoque precisas.
    - **Prioridade:** [P1]
 
-9. **F9:** Visualização e Relatórios de Estoque
+10. **F10:** Visualização e Relatórios de Estoque
    - **Descrição:** O sistema deve permitir visualizar o estoque de peças em tempo real e gerar relatórios de estoque.
    - **Critérios de Aceitação:** Visualização em tempo real e relatórios gerados corretamente.
    - **Prioridade:** [P1]
 
 ### Gerenciamento de Equipes
-10. **F10:** Cadastro de Equipes
+11. **F11:** Cadastro de Equipes
     - **Descrição:** O sistema deve permitir cadastrar as equipes, com informações sobre os colaboradores e suas especialidades.
     - **Critérios de Aceitação:** Cadastro realizado com sucesso e informações acessíveis.
    - **Prioridade:** [P1]
 
-11. **F11:** Atribuição e Gerenciamento de Disponibilidade
-    - **Descrição:** O sistema deve permitir atribuir equipes às solicitações de manutenção e gerenciar a disponibilidade dos colaboradores.
-    - **Critérios de Aceitação:** Atribuições realizadas corretamente e disponibilidade gerenciada com sucesso.
+12. **F12:** Atribuição de equipes
+    - **Descrição:** O sistema deve permitir atribuir equipes às solicitações de manutenção
+    - **Critérios de Aceitação:** Atribuições realizadas corretamente.
+   - **Prioridade:** [P1]
+
+13. **F13:** Gerenciamento de Disponibilidade
+    - **Descrição:** Gerenciar a disponibilidade dos colaboradores.
+    - **Critérios de Aceitação:** Disponibilidade gerenciada com sucesso.
    - **Prioridade:** [P1]
 
 ### Autenticação e Autorização
-12. **F12:** Criação de Contas de Usuário
-    - **Descrição:** O sistema deve permitir a criação de contas de usuário para diferentes tipos de acesso (administrador, técnico, etc.).
+13. **F13:** Criação de Contas de Usuário
+    - **Descrição:** O sistema deve permitir a criação de contas de usuário para diferentes tipos de acesso (gerente, técnico, etc.).
     - **Critérios de Aceitação:** Contas criadas com sucesso e acessos controlados conforme perfil.
    - **Prioridade:** [P1]
 
-13. **F13:** Controle de Acessos
+14. **F14:** Controle de Acessos
     - **Descrição:** O sistema deve controlar o acesso a diferentes funcionalidades da aplicação web, com base no tipo de usuário.
     - **Critérios de Aceitação:** Acesso controlado corretamente e funcionalidades acessíveis conforme permissões. 
    - **Prioridade:** [P1]
+
+## Casos de Uso
+
+### Cadastro e Visualização de Máquinas
+
+1. **Cadastro de Máquinas**
+   - **Descrição:** O sistema deve permitir o cadastro completo de máquinas, incluindo nome, tipo, modelo, data de fabricação, número de série, localização e histórico de manutenção.
+   - **Usuário:** Técnico de manutenção
+   - **Cenário:** O técnico acessa o módulo de cadastro de máquinas, preenche os detalhes necessários e salva as informações. O sistema armazena os dados e disponibiliza o histórico de manutenção associado.
+
+2. **Visualização Detalhada de Máquinas**
+   - **Descrição:** O sistema deve permitir a visualização detalhada de cada máquina, incluindo o histórico de manutenções e dados sobre peças e materiais utilizados.
+   - **Usuário:** Técnico de manutenção
+   - **Cenário:** O técnico seleciona uma máquina para visualização detalhada, acessa o histórico de manutenções e revisa informações sobre peças e materiais utilizados.
+
+### Gestão de Solicitações de Manutenção
+
+3. **Cadastro de Solicitações de Manutenção**
+   - **Descrição:** O sistema deve permitir o registro de solicitações de manutenção, incluindo descrição do problema, data da solicitação, prioridade, responsável e status.
+   - **Usuário:** Técnico de manutenção
+   - **Cenário:** O técnico cria uma nova solicitação de manutenção, insere as informações necessárias e salva. A solicitação é registrada e está disponível para acompanhamento.
+
+4. **Gerenciamento do Status da Manutenção**
+   - **Descrição:** O sistema deve permitir gerenciar o status da manutenção (pendente, em andamento, concluída, cancelada), adicionar comentários e arquivos relacionados.
+   - **Usuário:** Técnico de manutenção
+   - **Cenário:** O técnico atualiza o status de uma solicitação de manutenção, adiciona comentários e anexa arquivos relacionados ao progresso da manutenção.
+
+5. **Atribuição de Equipes**
+   - **Descrição:** O sistema deve permitir a atribuição de equipes de manutenção às solicitações.
+   - **Usuário:** Gerente de manutenção
+   - **Cenário:** O gerente atribui uma equipe a uma solicitação de manutenção e registra as peças e materiais necessários para a tarefa.
+
+### Controle de Estoque
+
+6. **Cadastro de Peças de Reposição**
+   - **Descrição:** O sistema deve permitir o cadastro de peças de reposição, incluindo nome, código, fornecedor, quantidade em estoque e valor unitário.
+   - **Usuário:** Técnico de manutenção
+   - **Cenário:** O técnico cadastra uma nova peça de reposição, insere as informações relevantes e salva. A peça é registrada no sistema e pode ser consultada quando necessário.
+
+7. **Registro de Entrada e Saída de Peças**
+   - **Descrição:** O sistema deve registrar a entrada e saída de peças, com data e quantidade.
+   - **Usuário:** Técnico de manutenção
+   - **Cenário:** O técnico registra a entrada de novas peças no estoque e a saída de peças usadas, atualizando as quantidades disponíveis no sistema.
+
+8. **Visualização e Relatórios de Estoque**
+   - **Descrição:** O sistema deve permitir visualizar o estoque de peças em tempo real e gerar relatórios de estoque.
+   - **Usuário:** Gerente de manutenção
+   - **Cenário:** O gerente visualiza o estoque atual de peças e gera relatórios para análise do inventário e planejamento de compras.
+
+### Gerenciamento de Usuários
+
+9. **Criação de Contas de Usuário**
+   - **Descrição:** O sistema deve permitir a criação de contas de usuário para diferentes tipos de acesso, como gerente, técnico, etc.
+   - **Usuário:** Gerente de manutenção
+   - **Cenário:** O gerente cria uma nova conta de usuário, define o tipo de acesso e configura as permissões conforme necessário.
+
+10. **Controle de Acessos**
+    - **Descrição:** O sistema deve controlar o acesso a diferentes funcionalidades da aplicação web com base no tipo de usuário.
+    - **Usuário:** Gerente de manutenção
+    - **Cenário:** O gerente verifica e ajusta as permissões de acesso dos usuários para garantir que apenas as funcionalidades apropriadas estejam disponíveis para cada tipo de usuário.
 
 ## Requisitos Não Funcionais
 
@@ -108,11 +176,10 @@ O público-alvo é composto exclusivamente pelas equipes de manutenção, que ut
    - **Critérios de Aceitação:** Implementação de autenticação e autorização adequadas, com testes de segurança realizados.
    - **Prioridade:** [P1]
 
-3. **NF3:** Usabilidade
+3. **NF3:** Interface amigável e intuitiva
    - **Descrição:** O sistema deve ter uma interface intuitiva e fácil de usar para garantir que os usuários possam realizar suas tarefas sem dificuldades.
    - **Critérios de Aceitação:** Feedback positivo de testes de usabilidade realizados com usuários representativos.
    - **Prioridade:** [P1]
-
 
    4. **NF4:** Responsividade
    - **Descrição:** A aplicação web deve funcionar perfeitamente em diferentes dispositivos (computadores, tablets, smartphones).
@@ -121,11 +188,6 @@ O público-alvo é composto exclusivamente pelas equipes de manutenção, que ut
 
 ### Métricas
 
-| Medida               | Estado Atual | Esperado | Resultados |
-|----------------------|--------------|----------|------------|
-| Tempo de Resposta    | 5 segundos    | < 2 segundos | [Resultado] |
-| Taxa de Erros de Segurança | 2%         | 0%       | [Resultado] |
-| Satisfação do Usuário | 60%          | 85%      | [Resultado] |
 
 ## Fora de Escopo
 
